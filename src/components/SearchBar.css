@@ -1,0 +1,91 @@
+.search-bar-wrapper {
+  position: relative;
+  min-width: 260px;
+}
+
+.search-bar-input {
+  width: 100%;
+  padding: 10px 14px;
+  padding-left: 38px;
+  background: #1a1a32;
+  border: 1px solid #333;
+  border-radius: 7px;
+  color: #e0e0e0;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.search-bar-input:focus {
+  border-color: #555;
+}
+
+.search-bar-input::placeholder {
+  color: #666;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #141428;
+  border: 1px solid #333;
+  border-top: none;
+  border-radius: 0 0 7px 7px;
+  max-height: 360px;
+  overflow-y: auto;
+  z-index: 200;
+}
+
+.search-result-item {
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+  transition: background 0.1s;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: #1e1e3a;
+}
+
+.search-result-name {
+  color: #e0e0e0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.search-result-freq {
+  color: #888;
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier New', monospace;
+  margin-top: 3px;
+}
+
+.search-result-section {
+  color: #666;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.no-results {
+  padding: 20px 14px;
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+}

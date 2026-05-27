@@ -1,0 +1,88 @@
+.band-detail {
+  background: #141428;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-top: 14px;
+}
+
+.band-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.band-detail-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.band-detail-close {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.band-detail-close:hover {
+  background: #222;
+  color: #fff;
+}
+
+.band-detail-freq {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier New', monospace;
+  font-size: 17px;
+  color: #aaa;
+  margin-bottom: 14px;
+}
+
+.band-detail-category {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.band-detail-desc {
+  color: #ccc;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.band-detail-uses-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.band-detail-uses {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.band-detail-uses li {
+  background: #1e1e3a;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 16px;
+  color: #ccc;
+}

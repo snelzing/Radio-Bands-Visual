@@ -1,0 +1,87 @@
+.spectrum-chart-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 40px;
+}
+
+.spectrum-chart-container svg {
+  display: block;
+  min-width: 600px;
+}
+
+.band-rect {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.band-rect:hover {
+  opacity: 0.8;
+}
+
+.band-rect.selected {
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-dasharray: 4 2;
+}
+
+.band-label-internal {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier New', monospace;
+  font-size: 12px;
+  fill: #000;
+  cursor: pointer;
+  dominant-baseline: middle;
+  text-anchor: start;
+  font-weight: 700;
+}
+
+.axis-label {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier New', monospace;
+  font-size: 12px;
+  fill: #888;
+  text-anchor: middle;
+}
+
+.axis-tick {
+  stroke: #333;
+  stroke-width: 1;
+}
+
+.axis-tick-major {
+  stroke: #555;
+  stroke-width: 1.5;
+}
+
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(20, 20, 40, 0.95);
+  border: 1px solid #555;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 16px;
+  color: #e0e0e0;
+  white-space: nowrap;
+  z-index: 100;
+  transform: translate(-50%, 0);
+  margin-top: 8px;
+}
+
+.chart-tooltip .tooltip-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.chart-tooltip .tooltip-freq {
+  color: #aaa;
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier New', monospace;
+}
+
+.no-bands-msg {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 14px;
+}

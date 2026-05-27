@@ -1,0 +1,38 @@
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.zoom-step {
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 3px 10px;
+  border-radius: 5px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.zoom-step:hover {
+  background: #222;
+  color: #e0e0e0;
+}
+
+.zoom-step.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.zoom-separator {
+  color: #555;
+  font-size: 14px;
+  user-select: none;
+}
+
+.zoom-arrow {
+  color: #555;
+  font-size: 12px;
+  user-select: none;
+}
