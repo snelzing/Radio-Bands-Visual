@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+# Radio Waves — Spectrum Allocation Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web app for visualizing the radio frequency spectrum from VLF (3 kHz) through EHF (300 GHz). Built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Displays the full radio spectrum on a logarithmic scale, organized by ITU frequency regions
+- Color-coded bands for different services: amateur radio, broadcast, aeronautical, maritime, cellular, ISM/Wi-Fi, satellite, navigation, and more
+- Click any ITU section (VLF, LF, MF, HF, VHF, UHF, SHF, EHF) to zoom in and see detailed frequency allocations
+- Click a specific band to view a description of what it is used for
+- Search bar to quickly find any band by name or description
+- ~60+ frequency allocations including ham radio bands, broadcast services, Wi-Fi, cellular, Meshtastic/LoRa, GPS, aviation, marine, and more
 
-## React Compiler
+## How to use
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+npm install
+npm run dev        # development server at localhost:5173
+npm run build      # production build to dist/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Browse the spectrum, zoom into sections, and click bands for details. Use the search bar to jump directly to a band.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Work in progress
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is a work in progress. The frequency allocation data is based on publicly available information and may contain inaccuracies, omissions, or oversimplifications. Many allocations are region-dependent (FCC, ITU Region 1/2/3, etc.), and the app does not yet account for these regional differences.
+
+Contributions, corrections, and suggestions from people with more experience in radio waves, spectrum management, and amateur radio are very welcome. If you notice something wrong or missing, please open an issue or pull request.
